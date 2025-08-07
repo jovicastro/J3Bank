@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  # Nome do nosso serviço de banco de dados
+  postgres-db:
+    image: postgres:15 # A imagem a ser usada
+    container_name: JSBank # Nome explícito para o contêiner
+    restart: always # Reinicia o contêiner se ele cair
+    environment:
+      # As mesmas credenciais do seu application.properties
+      POSTGRES_USER: jovicastro
+      POSTGRES_PASSWORD: 300303
+      POSTGRES_DB: j3data
+    ports:
+      - "5432:5432" # Mapeamento de porta "host:container"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data # Persiste os dados
+
+# Define um volume nomeado para que os dados não se percam ao recriar o contêiner
+volumes:
+  postgres-data:
