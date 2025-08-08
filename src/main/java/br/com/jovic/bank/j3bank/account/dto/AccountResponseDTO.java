@@ -12,4 +12,3 @@ public record AccountResponseDTO(
         AccountStatus status,
         String ownerName
 ) {}
-//zzz

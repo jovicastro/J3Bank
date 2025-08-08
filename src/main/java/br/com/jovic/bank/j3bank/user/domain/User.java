@@ -1,10 +1,13 @@
 package br.com.jovic.bank.j3bank.user.domain;
 
+import java.util.List;
+import java.util.ArrayList;
+import br.com.jovic.bank.j3bank.account.domain.Account;
 import jakarta.persistence.*;
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 @Entity(name = "User") // Diz ao JPA que esta classe é uma entidade.
 @Table(name = "users") // Especifica o nome da tabela no banco (boa prática usar plural).

@@ -2,10 +2,13 @@ package br.com.jovic.bank.j3bank.account.domain;
 
 import br.com.jovic.bank.j3bank.user.domain.User;
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 import java.time.LocalDateTime;
 import java.math.BigDecimal;
 
-
+@Setter
+@Getter
 @Entity // define como uma entidade e cria uma tabela no banco
 @Table(name = "accounts")
 public class Account {
@@ -38,3 +41,4 @@ public class Account {
         this.creationDate = LocalDateTime.now();
     }
 }
+
