@@ -20,4 +20,6 @@ public class TransactionController {
     public ResponseEntity<Void> performTransaction(@RequestBody TransactionRequestDTO requestDTO) {
         transactionService.executeTransaction(requestDTO);
         return ResponseEntity.ok().build();
+    }
+}
 

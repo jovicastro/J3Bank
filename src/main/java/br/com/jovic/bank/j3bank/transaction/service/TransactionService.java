@@ -6,7 +6,7 @@ import br.com.jovic.bank.j3bank.fraud.service.FraudDetector;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service // Marca esta classe como um serviço de negócio para o Spring
+@Service("fraudDetectionTransactionService") // Marca esta classe como um serviço de negócio para o Spring
 public class TransactionService {
 
     private final FraudDetector fraudDetector;
@@ -43,4 +43,3 @@ public class TransactionService {
         return result;
     }
 }
-
